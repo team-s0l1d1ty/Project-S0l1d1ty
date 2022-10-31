@@ -30,8 +30,14 @@ Usage instructions can be found in our [Quickstart](https://github.com/team-s0l1
 ## Suggestion for Securing User Device, and P2P Communication
 Over here we will discuss about the security of LightDID and FullDID as well as the security of the communication between Attester, Verifier and Claimer.
 
-The solution that we are about to discuss is not included in the PoC but it can be built on top of the PoC to provide the security for User, Device and P2P communication
+The solution that we are about to discuss is not included in the PoC to aid the rapid development of PoC but it can be built on top of the PoC to provide the security for User, Device and P2P communication
 
 ### Securing User and Devices
+In the other implementations of Kilt-Protocol as seen in [socialKYC](https://socialkyc.io/), users, attesters and verifiers are secured by an external extension the [Sporran Wallet](https://github.com/BTE-Trusted-Entity/sporran-extension). Therefore, it is viable that in a custom implementation some form of ["Cold Wallet"](https://web3isgoinggreat.com/glossary) can be implemented to ensure the safety of the Account and Credentials.
 
 ### Securing P2P Communication
+P2P communication between Attester and User, Verifier and User is done over HTTP which has to be secure by SSL (HTTPS). 
+
+An additional layer of security is also provided at Application Level in the [Messaging API](https://kiltprotocol.github.io/sdk-js/modules/_kiltprotocol_messaging.html) which can allow for 
+
+Examples can be found [here](https://github.com/BTE-Trusted-Entity/socialkyc.io/search?q=encrypt).
