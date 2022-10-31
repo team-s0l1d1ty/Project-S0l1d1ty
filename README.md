@@ -6,7 +6,7 @@ non-recoverable, the central ID provider/agency will not be able to perform trus
 Thus, the solution has to explore adopting a _decentralised model of doing trust attestation_ such as using blockchains, smart contracts and immutable user profiles to ensure that users and devices connecting to government networks are _authorised, authenticated, secured_ and _security posture validated constantly_. New _users and devices can also be added to the blockchain via peer-to-peer validation_.
 
 ## Objective of PoC
-Our Proof of Concept (PoC) seeks to illustrate how Kilt Protocol can be used to address the following problems in the problem statement: 
+Our Proof of Concept (PoC) seeks to illustrate how [Kilt Protocol](https://www.kilt.io/) can be used to address the following problems in the problem statement: 
 1. adding of new users to blockchain via P2P validation
 2. authentication and authorisation to service
 3. constant validation of security posture
