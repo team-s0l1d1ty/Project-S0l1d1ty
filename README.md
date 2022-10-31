@@ -63,6 +63,8 @@ An additional layer of security is also provided at Application Level in the [Me
 
 Examples of its implementations can be found [here](https://github.com/BTE-Trusted-Entity/socialkyc.io/search?q=encrypt).
 
-## Achieving Decentralisation
-### Suggested Structure of Hierarchy
+### Achieving Decentralisation
+Over here we will briefly discuss about the ideal state of implementation.
+
+#### Suggested Structure of Hierarchy
 
