@@ -31,3 +31,7 @@ Usage instructions can be found in out [Wiki](https://github.com/team-s0l1d1ty/P
 Over here we will discuss about the security of LightDID and FullDID as well as the security of the communication between Attester, Verifier and Claimer.
 
 The solution that we are about to discuss is not included in the PoC but it can be built on top of the PoC to provide the security for User, Device and P2P communication
+
+### Securing User and Devices
+
+### Securing P2P Communication
