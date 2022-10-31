@@ -32,6 +32,8 @@ As can be seen above :
 
 ### PoC High-level Workflow
 #### Adding of New User/Device via P2P Validation
+- User Workflow
+- Attester Workflow
 
 #### Authentication and Authorisation
 - Accessing Attesting Service for Attester(s)
