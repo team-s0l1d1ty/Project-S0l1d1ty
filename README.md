@@ -13,7 +13,7 @@ Our Proof of Concept (PoC) seeks to illustrate how Kilt Protocol can be used to 
 
 Although security of user and/or device is not demonstrated in our PoC, a high-level [suggestion](#Suggestion-for-Securing-User-Device-and-P2P-Communication) has been provided below.
 
-Usage instructions can be found in out [Wiki](https://github.com/team-s0l1d1ty/Project-S0l1d1ty/wiki).
+Usage instructions can be found in our [Quickstart](https://github.com/team-s0l1d1ty/Project-S0l1d1ty/wiki/Quickstart).
 
 ### Technology Stack
 - Frontend : HTML/CSS/Javascript
