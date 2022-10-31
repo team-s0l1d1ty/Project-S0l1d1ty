@@ -20,13 +20,14 @@ Usage instructions can be found in our [Quickstart](https://github.com/team-s0l1
 - Middleware : [NodeJS](https://nodejs.org/en/)/[HAPI](https://hapi.dev/)
 - Backend : [Kilt-Protocol](https://www.kilt.io/)
 
-### High-level Architecture
+### PoC High-level Architecture
 
-### High-level Workflow
+### PoC High-level Workflow
 #### Adding of New User/Device via P2P Validation
 #### Authentication and Authorisation to Service
 #### Constant Validation of Security Posture
 
+## Beyond the PoC
 ## Suggestion for Securing User Device, and P2P Communication
 Over here we will discuss about the security of LightDID and FullDID as well as the security of the communication between Attester, Verifier and Claimer.
 
@@ -42,7 +43,6 @@ An additional layer of security is also provided at Application Level in the [Me
 
 Examples can be found [here](https://github.com/BTE-Trusted-Entity/socialkyc.io/search?q=encrypt).
 
-## Achieving Decentralisation
-To truly achieve decentralisation, 
-
+### Achieving Decentralisation
+#### Suggested Structure of Hierarchy
 
