@@ -27,7 +27,7 @@ For the ease of development, the PoC is built like a traditional client-server a
 
 
 As can be seen above : 
-1. There is a webserver
+1. Client communicates with Webserver like how any Client-Server architecture would
 2. Instead of an centralised authentication database / oauth system, webserver directly querying the blockchain
 
 ### PoC High-level Workflow
