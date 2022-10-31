@@ -21,6 +21,7 @@ Usage instructions can be found in our [Quickstart](https://github.com/team-s0l1
 - Backend : [Kilt-Protocol](https://www.kilt.io/)
 
 ### PoC High-level Architecture
+For the ease of development, the PoC is built like a traditional webpage. There is a webserver
 
 ### PoC High-level Workflow
 #### Adding of New User/Device via P2P Validation
