@@ -30,7 +30,7 @@ For the ease of development, the PoC is built like a traditional webpage. There 
 
 ## Beyond the PoC
 ## Suggestion for Securing User Device, and P2P Communication
-Over here we will discuss about the security of LightDID and FullDID as well as the security of the communication between Attester, Verifier and Claimer.
+Over here we will briefly discuss about the security of LightDID and FullDID as well as the security of the communication between Attester, Verifier and Claimer.
 
 The solution that we are about to discuss is not included in the PoC to aid the rapid development of PoC but it can be built on top of the PoC to provide the security for User, Device and P2P communication
 
@@ -38,11 +38,13 @@ The solution that we are about to discuss is not included in the PoC to aid the 
 In the other implementations of Kilt-Protocol as seen in [socialKYC](https://socialkyc.io/), users, attesters and verifiers are secured by an external extension the [Sporran Wallet](https://github.com/BTE-Trusted-Entity/sporran-extension). Therefore, it is viable that in a custom implementation some form of ["Cold Wallet"](https://web3isgoinggreat.com/glossary) can be implemented to ensure the safety of the Account and Credentials.
 
 ### Securing P2P Communication
-P2P communication between Attester and User, Verifier and User is done over HTTP which has to be secure by SSL (HTTPS). 
+Apart from what the PoC has attempted to illustrate, in actual implementation a web3name is suggested to be linked to the Attester/Verifier instance. This web3name can then be verified by the user similar to what is done in this [quickstart documentation](https://docs.kilt.io/docs/develop/sdk/quickstart) done by the Kilt Team.
 
-An additional layer of security is also provided at Application Level in the [Messaging API](https://kiltprotocol.github.io/sdk-js/modules/_kiltprotocol_messaging.html) which can allow for 
+P2P communication between Attester and User, Verifier and User is done over HTTP naturally has to be secure by SSL (HTTPS). 
 
-Examples can be found [here](https://github.com/BTE-Trusted-Entity/socialkyc.io/search?q=encrypt).
+An additional layer of security is also provided at Application Level in the [Messaging API](https://kiltprotocol.github.io/sdk-js/modules/_kiltprotocol_messaging.html) which gives additional encapsulation for user credentials and accounts. 
+
+Examples of its implementations can be found [here](https://github.com/BTE-Trusted-Entity/socialkyc.io/search?q=encrypt).
 
 ## Achieving Decentralisation
 ### Suggested Structure of Hierarchy
