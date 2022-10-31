@@ -11,7 +11,7 @@ Our Proof of Concept (PoC) seeks to illustrate how Kilt Protocol can be used to 
 2. authentication and authorisation to service
 3. constant validation of security posture
 
-Although security of user and/or device is not demonstrated in our PoC, a high-level [suggestion](#Suggestion-for-Securing-User-or-Device) has been provided below.
+Although security of user and/or device is not demonstrated in our PoC, a high-level [suggestion](#Suggestion-for-Securing-User-Device-and-P2P-Communication) has been provided below.
 
 Usage instructions can be found in out [Wiki](https://github.com/team-s0l1d1ty/Project-S0l1d1ty/wiki).
 
@@ -27,7 +27,7 @@ Usage instructions can be found in out [Wiki](https://github.com/team-s0l1d1ty/P
 #### Authentication and Authorisation to Service
 #### Constant Validation of Security Posture
 
-## Suggestion for Securing User, Device and P2P Communication
+## Suggestion for Securing User Device and P2P Communication
 Over here we will discuss about the security of LightDID and FullDID as well as the security of the communication between Attester, Verifier and Claimer.
 
 The solution that we are about to discuss is not included in the PoC but it can be built on top of the PoC to provide the security for User, Device and P2P communication
