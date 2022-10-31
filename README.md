@@ -41,3 +41,8 @@ P2P communication between Attester and User, Verifier and User is done over HTTP
 An additional layer of security is also provided at Application Level in the [Messaging API](https://kiltprotocol.github.io/sdk-js/modules/_kiltprotocol_messaging.html) which can allow for 
 
 Examples can be found [here](https://github.com/BTE-Trusted-Entity/socialkyc.io/search?q=encrypt).
+
+## Achieving Decentralisation
+To truly achieve decentralisation, 
+
+
