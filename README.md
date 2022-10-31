@@ -13,6 +13,8 @@ Our Proof of Concept (PoC) seeks to address the following problems in the proble
 
 Although security of user and/or device is not demonstrated in our PoC, a high-level [suggestion](#Suggestion-for-Securing-User-or-Device) has been provided below.
 
+Usage instructions can be found in out [Wiki](https://github.com/team-s0l1d1ty/Project-S0l1d1ty/wiki).
+
 ### Technology Stack
 - Frontend : HTML/CSS/Javascript
 - Middleware : [NodeJS](https://nodejs.org/en/)/[HAPI](https://hapi.dev/)
