@@ -23,17 +23,27 @@ Usage instructions can be found in our [Quickstart](https://github.com/team-s0l1
 ### PoC High-level Architecture
 For the ease of development, the PoC is built like a traditional client-server architecture but with a slight twist. 
 
-![image](https://user-images.githubusercontent.com/115341229/199011008-367031c1-0efe-4e04-bb83-9a15dd0f8940.png)
+![image](https://user-images.githubusercontent.com/115341229/199013078-2dec958b-82fb-499f-8a4a-c01c21c16055.png)
 
 
 As can be seen above : 
-1. Client communicates with Webserver like how any Client-Server architecture would
+1. Client communicates with Webserver like any Client-Server architecture.
 2. Instead of an centralised authentication database / oauth system, webserver directly querying the blockchain
 
 ### PoC High-level Workflow
 #### Adding of New User/Device via P2P Validation
 - User Workflow
-- Attester Workflow
+
+![image](https://user-images.githubusercontent.com/115341229/199014842-7a6683d0-722d-496e-ba8d-cf58a9e85273.png)
+
+   1. User sends credentials via HTML form to server. 
+   2. Server writes the information into a requestAttestation format and save as a temp file.
+
+- Attesting Workflow
+   1. [Authentication workflow of the Attester](#Authentication-and-Authorisation) will be talked about below
+   2. After authentication, Attester would be able to access the "Attest" webservice and read the temp file
+   3. Attester would then write attestation into blockchain. Successful attestation would register the rootHash of the credential in the blockchain
+   4. tmp file is then deleted. 
 
 #### Authentication and Authorisation
 - Accessing Attesting Service for Attester(s)
