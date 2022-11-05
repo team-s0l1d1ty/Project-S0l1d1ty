@@ -6,6 +6,7 @@ non-recoverable, the central ID provider/agency will not be able to perform trus
 Thus, the solution has to explore adopting a _decentralised model of doing trust attestation_ such as using blockchains, smart contracts and immutable user profiles to ensure that users and devices connecting to government networks are _authorised, authenticated, secured_ and _security posture validated constantly_. New _users and devices can also be added to the blockchain via peer-to-peer validation_.
 
 ## Concept of Claim, Attestation and Verification
+### Overview of Transactions
 ![image](https://user-images.githubusercontent.com/115341229/199501575-7a06c797-34f1-4d94-810e-b64564bf5c34.png)
 
 
@@ -21,8 +22,6 @@ Our Proof of Concept (PoC) seeks to illustrate how the concept above can be used
 1. adding of new users to blockchain via P2P validation
 2. authentication and authorisation to service
 3. constant validation of security posture
-
-
 
 Although security of user and/or device is not demonstrated in our PoC, a high-level [suggestion](#Suggestion-for-Securing-User-Device-and-P2P-Communication) has been provided below.
 
