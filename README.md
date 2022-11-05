@@ -16,34 +16,32 @@ Thus, the solution has to explore adopting a _decentralised model of doing trust
 ### Credential Verification
 <img src="https://user-images.githubusercontent.com/115341229/199499555-0a09d1d0-04b0-4540-a375-441b190f797e.png" width=50% height=50%>
 
-
 ## Objective of PoC
 Our Proof of Concept (PoC) seeks to illustrate how the concept above can be used to address the following problems in the problem statement  : 
 1. adding of new users to blockchain via P2P validation
 2. authentication and authorisation to service
 3. constant validation of security posture
 
-Although security of user and/or device is not demonstrated in our PoC, a high-level [suggestion](#Suggestion-for-Securing-User-Device-and-P2P-Communication) has been provided below.
+Although security of user and/or device is not demonstrated in our PoC, a high-level [suggestion](#Suggestion-for-Securing-User-Device-and-P2P-Communication) has been provided below. Additionally, [Beyond the Poc](#Beyond-the-PoC) section will explain additional mechanisms not illustrated by the PoC.
 
 Usage instructions of our PoC can be found in our [Quickstart](https://github.com/team-s0l1d1ty/Project-S0l1d1ty/wiki/Quickstart).
+
+## PoC High-level Architecture
+To demonstrate clearly the workflow as well as for ease of development, the PoC is built like a traditional client-server architecture but with a slight twist. 
+
+![image](https://user-images.githubusercontent.com/115341229/199013078-2dec958b-82fb-499f-8a4a-c01c21c16055.png)
+
+As can be seen above : 
+1. Client communicates with Webserver like any Client-Server architecture.
+2. Instead of an centralised authentication database / oauth system, webserver directly querying the blockchain
 
 ### Technology Stack
 - Frontend : HTML/CSS/Javascript
 - Middleware : [NodeJS](https://nodejs.org/en/)/[HAPI](https://hapi.dev/)
 - Backend : [Kilt-Protocol](https://www.kilt.io/)
 
-### PoC High-level Architecture
-To demonstrate clearly the workflow as well as for ease of development, the PoC is built like a traditional client-server architecture but with a slight twist. 
-
-![image](https://user-images.githubusercontent.com/115341229/199013078-2dec958b-82fb-499f-8a4a-c01c21c16055.png)
-
-
-As can be seen above : 
-1. Client communicates with Webserver like any Client-Server architecture.
-2. Instead of an centralised authentication database / oauth system, webserver directly querying the blockchain
-
-### PoC High-level Workflow
-#### Adding of New User/Device via P2P Validation
+## PoC High-level Workflow
+### Adding of New User/Device via P2P Validation
 - User Workflow
 
 ![image](https://user-images.githubusercontent.com/115341229/199014842-7a6683d0-722d-496e-ba8d-cf58a9e85273.png)
@@ -57,21 +55,20 @@ As can be seen above :
    3. Attester would then write attestation into blockchain. Successful attestation would register the rootHash of the credential in the blockchain
    4. tmp file is then deleted. 
 
-#### Authentication and Authorisation
+### Authentication and Authorisation
 Authentication and authorisation is demonstrated like logging into a service.
 
 - Accessing Attesting Service for Attester(s)
 - Accessing Services for Users with LightDID
 
 
-#### Constant Validation of Security Posture
+### Constant Validation of Security Posture
 - Revocation/Removal of credentials
    1. In the same attester portal, an attester can revoke/remove credentials that they attested.
    2. When credentials are removed or revoked, they are not removed on the user-end.  
    3. The difference between revoking and removing is that the attestation for revocation is still present on the blockchain but with a revoke:true flag set. 
 
 - Verifying of service is legitimate
-
 
 ## Beyond the PoC
 ### Suggestion for Securing User Device, and P2P Communication
