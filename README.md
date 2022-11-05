@@ -9,7 +9,11 @@ Thus, the solution has to explore adopting a _decentralised model of doing trust
 ![image](https://user-images.githubusercontent.com/115341229/199501575-7a06c797-34f1-4d94-810e-b64564bf5c34.png)
 
 
+### Credential Attestation
+<img src="https://user-images.githubusercontent.com/115341229/199499498-f5969f6f-c4ba-4250-8d17-7657afecf972.png" width=50% height=50%>
 
+### Credential Verification
+<img src="https://user-images.githubusercontent.com/115341229/199499555-0a09d1d0-04b0-4540-a375-441b190f797e.png" width=50% height=50%>
 
 
 ## Objective of PoC
@@ -18,11 +22,6 @@ Our Proof of Concept (PoC) seeks to illustrate how the concept above can be used
 2. authentication and authorisation to service
 3. constant validation of security posture
 
-### Credential Attestation
-<img src="https://user-images.githubusercontent.com/115341229/199499498-f5969f6f-c4ba-4250-8d17-7657afecf972.png" width=50% height=50%>
-
-### Credential Verification
-<img src="https://user-images.githubusercontent.com/115341229/199499555-0a09d1d0-04b0-4540-a375-441b190f797e.png" width=50% height=50%>
 
 
 Although security of user and/or device is not demonstrated in our PoC, a high-level [suggestion](#Suggestion-for-Securing-User-Device-and-P2P-Communication) has been provided below.
