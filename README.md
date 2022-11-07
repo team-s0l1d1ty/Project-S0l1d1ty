@@ -96,11 +96,6 @@ As can be seen above :
 ## Beyond the PoC
 This section will talk about ideas and Kilt-Protocol mechanisms in terms of scaling and security not shown in the PoC.
 
-### Scaling with serverless architecture
-![image](https://user-images.githubusercontent.com/115341229/200275934-c1668428-d38e-4a9c-bbdc-3b36739cfaef.png)
-
-To push the idea of avoiding single source of failure further whilsts keeping costs low, we can delve into the realm of serverless architecture. 
-
 ### Scaling with Distributed Trust
 In Kilt-Protocol, any user with Full DID will be able to do trust attestation. This in itself is a benefit as now any users will be able to attest for claims where there are other use cases for example digital signing, but this is beyond the scope of our problem statement. 
 
@@ -148,6 +143,14 @@ Apart from what the PoC has attempted to illustrate, in actual implementation a 
 ![image](https://user-images.githubusercontent.com/115341229/200239866-0f192ef7-53b4-471c-86b5-fc7dbaa65678.png)
 
 Lastly, an additional verification step can be implemented like above (similar to a 2-way SSL authentication) and it can better help in preventing malicious acts such as phishing as user can now verify if the service they giving their credentials to is legitimate or not.
+
+
+### Scaling with serverless architecture
+![image](https://user-images.githubusercontent.com/115341229/200275934-c1668428-d38e-4a9c-bbdc-3b36739cfaef.png)
+
+The claiming, attesting, delegation, revocation and verification function can be made into AWS lamda, Google Cloud Functions or Azure Functions as the aforementioned functions are relatively simple and straighforward. As such, a serverless architecture can be used to lower cost, scale better and offers better security.
+
+
 
 ### Bring Your Own Blockchain
 Following this [guide](https://docs.kilt.io/docs/develop/sdk/chain_setup/standalone-chain-setup), we will be able to build our own hybrid chain 
