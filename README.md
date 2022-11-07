@@ -150,7 +150,8 @@ Lastly, an additional verification step can be implemented like above (similar t
 
 
 ### Scaling with serverless architecture
-![image](https://user-images.githubusercontent.com/115341229/200327841-3bd05863-c0d0-4cd2-9b02-450cf300d4be.png)
+![image](https://user-images.githubusercontent.com/115341229/200328149-88573fb8-2302-47d3-8a91-243b9fbcdb7d.png)
+
 
 
 Most of the functions (i.e claiming, attesting, delegation, revocation and verification) can be deployed on FaaS (e.g AWS lamda, Google Cloud Functions or Azure Functions) as the aforementioned functions can be easily designed:  
