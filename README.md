@@ -28,7 +28,7 @@ Shown below is a use case diagram which will form the basis of our PoC.
 
 | Use Case                |                                                                                                                  |
 |-------------------------|------------------------------------------------------------------------------------------------------------------|
-| Credential Verification | ![image](https://user-images.githubusercontent.com/115341229/200212847-009da606-7393-4e84-8adc-f872d6e0c079.png) |
+| Credential Attestation | ![image](https://user-images.githubusercontent.com/115341229/200212847-009da606-7393-4e84-8adc-f872d6e0c079.png) |
 | Credential Verification | <img src="https://user-images.githubusercontent.com/115341229/200213960-8aa12c21-5d09-472c-8a15-9f630167853d.png" width=86% height=86%> |
 | Credential Revocation   | <img src="https://user-images.githubusercontent.com/115341229/200215738-a3632e45-80e4-4465-b710-bbb92083abdd.png" width=87% height=87%> |
 
@@ -36,10 +36,11 @@ Shown below is a use case diagram which will form the basis of our PoC.
 ## PoC High-level Architecture
 To demonstrate clearly the workflow as well as for ease of development, the PoC is built like a traditional client-server architecture but with a slight twist. 
 
-![image](https://user-images.githubusercontent.com/115341229/199013078-2dec958b-82fb-499f-8a4a-c01c21c16055.png)
+![image](https://user-images.githubusercontent.com/115341229/200222444-0e61406b-e995-42fc-9c88-68dc753eb48d.png)
+
 
 As can be seen above : 
-1. Client communicates with Webserver like any Client-Server architecture.
+1. Client communicates with Attestation Webserver/Service like any Client-Server architecture.
 2. Instead of an centralised authentication database / oauth system, webserver directly querying the blockchain
 
 ### Technology Stack
@@ -48,34 +49,20 @@ As can be seen above :
 - Backend : [Kilt-Protocol](https://www.kilt.io/)
 
 ## PoC High-level Workflow
-### Adding of New User/Device via P2P Validation
-- User Workflow
 
-![image](https://user-images.githubusercontent.com/115341229/199014842-7a6683d0-722d-496e-ba8d-cf58a9e85273.png)
-
-   1. A user with a Digital Identity (DID) sends claims for a particular type of credential via HTML form to server. 
-   2. Server writes the information into a request for Attestation format and save as a temp file.
-
-- Attesting Workflow
-   1. [Authentication and authorisation](#Authentication-and-Authorisation) will be demonstrated below. So over, here we will just know that an attester logs in to the attester portal with an Attester Credential.
-   2. After authentication, Attester would be able to access the "Attest" webservice and read the temp file.
-   3. Attester would then write attestation into blockchain. Successful attestation would register the rootHash of the credential in the blockchain
-   4. tmp file is then deleted. 
-
-### Authentication and Authorisation
-Authentication and authorisation is demonstrated like logging into a service.
-
-- Accessing Attesting Service for Attester(s)
-- Accessing Services for Users with LightDID
+| PoC High-level Workflow                                                  | Diagram                                                                                                          |
+|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| Adding of New User/Device via P2P Validation<br>(Credential Attestation) | ![image](https://user-images.githubusercontent.com/115341229/200221519-9dc26345-1023-419b-ace8-43f3775459ab.png) |
+| Authentication and Authorisation<br>(Credential Verification)            | ![image](https://user-images.githubusercontent.com/115341229/200223103-31dbfe70-ad46-430c-9b64-43e9dab08ec5.png) |
+| Constant Validation of Security Posture<br>(Revocation of Credentials)   | ![image](https://user-images.githubusercontent.com/115341229/200229434-be577bc0-afea-48c6-accf-6100d193caf6.png) |
 
 
-### Constant Validation of Security Posture
-- Revocation/Removal of credentials
-   1. In the same attester portal, an attester can revoke/remove credentials that they attested.
-   2. When credentials are removed or revoked, they are not removed on the user-end.  
-   3. The difference between revoking and removing is that the attestation for revocation is still present on the blockchain but with a revoke:true flag set. 
 
-- Verifying of service is legitimate
+Revocation/Removal of credentials
+1. In the same attester portal, an attester can revoke/remove credentials that they attested.
+2. When credentials are removed or revoked, they are not removed on the user-end.  
+3. The difference between revoking and removing is that the attestation for revocation is still present on the blockchain but with a revoke:true flag set. 
+
 
 ## Beyond the PoC
 ### Suggestion for Securing User Device, and P2P Communication
