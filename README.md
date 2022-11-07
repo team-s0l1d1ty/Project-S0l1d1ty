@@ -73,7 +73,11 @@ As can be seen above :
 ![image](https://user-images.githubusercontent.com/115341229/200221519-9dc26345-1023-419b-ace8-43f3775459ab.png) 
 
 1. User will enter and send their claim through POST request to server
-2. Server will take the input and 
+2. Server will take the input and write it into a Attestation Request format and store it as a string in a temp file.
+3. Attester will access the webserver through the Attester dashboard, and read the temp file for attestation request.
+4. Once Attester validated the information provided, it will write the attestation onto the blockchain.
+5. Blockhain will return the hash back to the attester.
+6. Attester then sends the credential with the attesment hash back to the client.
 
 ### Authentication and Authorisation
 ![image](https://user-images.githubusercontent.com/115341229/200223103-31dbfe70-ad46-430c-9b64-43e9dab08ec5.png)
