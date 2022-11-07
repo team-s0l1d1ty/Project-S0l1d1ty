@@ -10,12 +10,12 @@
   - [Authentication and Authorisation](#authentication-and-authorisation)
   - [Constant Validation of Security Posture](#constant-validation-of-security-posture)
 - [Beyond the PoC](#beyond-the-poc)
-  - [Scaling with serverless architecture](#scaling-with-serverless-architecture)
   - [Scaling with Distributed Trust](#scaling-with-distributed-trust)
      - [Delegate Rights](#delegate-rights)
      - [Revoking Delegated Rights](#revoking-delegated-rights)
   - [Securing of light and full DID](#securing-of-light-and-full-did)
   - [Securing P2P Communication](#securing-p2p-communication)
+  - [Scaling with serverless architecture](#scaling-with-serverless-architecture)
   - [Bring Your Own Blockchain](#bring-your-own-blockchain)
 - [Demo Video](#demo-video)
 
@@ -159,7 +159,7 @@ Most of the functions (i.e claiming, attesting, delegation, revocation and verif
 Therefore, a serverless architecure can provide better :
 1. **availability** as there is no server downtime, and we we solely depend on CSPs SLA Uptime which is at least 99.95%. 
 2. **scalability** as functions in FaaS can be spun up as quickly as the CSPs can handle
-3. **security and privacy**[1](https://www.checkpoint.com/cyber-hub/cloud-security/what-is-serverless-security/) [2](https://documents.trendmicro.com/assets/white_papers/wp-securing-weak-points-in-serverless-architectures-risks-and-recommendations.pdf) as 
+3. **security and privacy**[[1]](https://www.checkpoint.com/cyber-hub/cloud-security/what-is-serverless-security/) [[2]](https://documents.trendmicro.com/assets/white_papers/wp-securing-weak-points-in-serverless-architectures-risks-and-recommendations.pdf) as 
    - we eliminate the need to secure the infrastructure (OS hardening, patching, server configurations etc).
    - ephemeral execution makes attacks difficult as the amount of time in the system is restricted to the timeout set.  
    - ephemeral execution makes data private as it is destroyed and not stored in the memory
