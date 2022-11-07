@@ -156,7 +156,7 @@ Most of the functions (i.e claiming, attesting, delegation, revocation and verif
 1. To make use of short and single purpose APIs or webservices.
 2. To be stateless such that local resources and processes are not reused.
 
-Therefore, a serverless architecure can provide better 
+Therefore, a serverless architecure can provide better :
 1. **availability** as there is no server downtime, and we we solely depend on CSPs SLA Uptime which is at least 99.95%. 
 2. **scalability** as functions in FaaS can be spun up as quickly as the CSPs can handle
 3. **security and privacy**[1](https://www.checkpoint.com/cyber-hub/cloud-security/what-is-serverless-security/) [2](https://documents.trendmicro.com/assets/white_papers/wp-securing-weak-points-in-serverless-architectures-risks-and-recommendations.pdf) as 
