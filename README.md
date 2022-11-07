@@ -12,6 +12,8 @@
 - [Beyond the PoC](#beyond-the-poc)
   - [Scaling with serverless architecture](#scaling-with-serverless-architecture)
   - [Scaling with Distributed Trust](#scaling-with-distributed-trust)
+     - []()
+     -  
   - [Securing of light and full DID](#securing-of-light-and-full-did)
   - [Securing P2P Communication](#securing-p2p-communication)
 - [Demo Video](#demo-video)
@@ -102,20 +104,28 @@ The issue with trust attestation by any Full DID is the issue of legitimacy of t
 
 As seen above, in an attested credential, the DID of the attester will always be revealed and if we know that the Attester ID can be trusted (DID can be posted on Official pages, hard-coded into an address book etc.), then the attestation is valid. 
 
-Then a new problem arises - what if the attester is not an individual but an organisation? How then can we scale up the number of attesters but not need to keep a big address book? Kilt has 2 solutions for this and they are **Delegation** and **Virtual Credential Organisation (not implemented yet in Kilt)**
+Then a new problem arises - what if the attester is not an individual but an organisation? How then can we scale up the number of attesters but not need to keep a big address book? Kilt has 2 solutions for this and they are [**Delegation**](https://kiltprotocol.github.io/sdk-js/classes/_kiltprotocol_core.DelegationNode.html) and **Virtual Credential Organisation (not implemented yet in Kilt)**
 
-#### Delegating Attest / Delegate Rights
+#### Delegate Rights
 
 ![image](https://user-images.githubusercontent.com/115341229/199498802-3dba5e20-8758-4d47-9fc5-9bfdbdfb3cd0.png)
 
 Delegation hierarchy organise their members in a traditional hierarchical structure, and are modeled as a Tree data structure (see diagram above). 
 
+There are 2 kinds of rights that can be given
+
 - The root of the delegation and it's assigned "delegator" can assign delegation and/or attest rights to it's child.
    - Referring to the diagram above, Attester 2 has the rights to delegate attester and delegation rights to more DIDs, but Attester 3 is only given the right to delegate more Attesters but not Attest for Attester 1 itself.
    - Attester 4 and 5 is given attest rights by Attester 3 to only attest credentials for Attester 1 but not delegate attester/delegator rights.
 
-#### Revoking Delegated Attest / Delegate Rights
-- only the parents of a given Attester can change or remove the Attester's delegation itself or any of its children. E.g., Attester 2 cannot change the delegation information for Attester 4, but Attester 1 and Attester 3 can both remove Attester 4 from the organization, or give them permission to also hire new people, 
+#### Revoking Delegated Rights
+Only the parents of a given Attester can change or remove the Attester's delegation itself or any of its children. 
+
+For example, Attester 2 cannot change the delegation information for Attester 4, but Attester 1 and Attester 3 can both remove Attester 4 from the organization, or give them permission to also delgate new people.
+
+Credential revocation works similarly, where the credential can be revoked by any parent or by the original attester. 
+
+For example, Attester 2 cannot revoke credentials issued by Attester 1, 3, 4 and 5. Attester 1 can revoke any credentials and Attester 4 and 5 can only revoke credentials that they attest but not each others'.
 
 ### Securing of light and full DID
 In the other implementations of Kilt-Protocol as seen in [socialKYC](https://socialkyc.io/), users, attesters and verifiers are secured by an external extension the [Sporran Wallet](https://github.com/BTE-Trusted-Entity/sporran-extension). Therefore, it is viable that in a custom implementation some form of ["Cold Wallet"](https://web3isgoinggreat.com/glossary) can be implemented to ensure the safe storage of the Account and Credentials as well as a means of accessing services.
