@@ -50,42 +50,52 @@ As can be seen above :
 
 ## PoC High-level Workflow
 
-| PoC High-level Workflow                                                  | Diagram                                                                                                          |
-|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| Adding of New User/Device via P2P Validation<br>(Credential Attestation) | ![image](https://user-images.githubusercontent.com/115341229/200221519-9dc26345-1023-419b-ace8-43f3775459ab.png) |
-| Authentication and Authorisation<br>(Credential Verification)            | ![image](https://user-images.githubusercontent.com/115341229/200223103-31dbfe70-ad46-430c-9b64-43e9dab08ec5.png) |
-| Constant Validation of Security Posture<br>(Revocation of Credentials)   | ![image](https://user-images.githubusercontent.com/115341229/200229434-be577bc0-afea-48c6-accf-6100d193caf6.png) |
+### Adding of New User/Device via P2P Validation<br>(Credential Attestation) 
+![image](https://user-images.githubusercontent.com/115341229/200221519-9dc26345-1023-419b-ace8-43f3775459ab.png) 
+
+1. User will enter and send their claim through POST request to server
+2. Server will take the input and 
 
 
+### Authentication and Authorisation (Credential Verification) 
+![image](https://user-images.githubusercontent.com/115341229/200223103-31dbfe70-ad46-430c-9b64-43e9dab08ec5.png)
 
-Revocation/Removal of credentials
-1. In the same attester portal, an attester can revoke/remove credentials that they attested.
-2. When credentials are removed or revoked, they are not removed on the user-end.  
-3. The difference between revoking and removing is that the attestation for revocation is still present on the blockchain but with a revoke:true flag set. 
+1. User will be presented a login page.
+2. User enter and sends in credential and mnemonic of DID that claimed the credential via a POST request
+3. Server received POST request, check's if it is the correct credential format and verifies the credential by querying the blockchain.
+4. If verification is successful, server allows access to service. Else access to service is denied. 
+
+### Constant Validation of Security Posture (Revocation of credentials)
+![image](https://user-images.githubusercontent.com/115341229/200229434-be577bc0-afea-48c6-accf-6100d193caf6.png)
+
+1. In the same attester portal, an attester can revoke credentials that they attested.
+2. When credentials are removed or revoked, they are not removed on the user-end, changes are made on the blockchain  
+3. There is a remove attestation function which was not implemented in the PoC.
+4. The difference between revoking and removing is : 
+   - Revoke : The attestation is still present on the blockchain but with a revoke:true flag set.
+   - Remove : Attestation is removed from the blockchain. 
+
+## Beyond the PoC (Ideal Implementation)
+### Scaling with "serverless architecture"
+
+### Scaling with Distributed Trust
+![image](https://user-images.githubusercontent.com/115341229/199498802-3dba5e20-8758-4d47-9fc5-9bfdbdfb3cd0.png)
 
 
-## Beyond the PoC
-### Suggestion for Securing User Device, and P2P Communication
-Over here we will briefly discuss about the security of LightDID and FullDID as well as the security of the communication between Attester, Verifier and Claimer.
+### Securing of light and full DID
+In the other implementations of Kilt-Protocol as seen in [socialKYC](https://socialkyc.io/), users, attesters and verifiers are secured by an external extension the [Sporran Wallet](https://github.com/BTE-Trusted-Entity/sporran-extension). Therefore, it is viable that in a custom implementation some form of ["Cold Wallet"](https://web3isgoinggreat.com/glossary) can be implemented to ensure the safe storage of the Account and Credentials as well as a means of accessing services.
 
-The solution that we are about to discuss is not included in the PoC to aid the rapid development of PoC but it can be built on top of the PoC to provide the security for User, Device and P2P communication
+### Securing P2P Communication
+Apart from what the PoC has attempted to illustrate, in actual implementation a web3name is suggested to be linked to the Attester/Verifier instance. This web3name can then be verified by the user similar to what is done in this [quickstart documentation](https://docs.kilt.io/docs/develop/sdk/quickstart) done by the Kilt Team. 
 
-#### Securing User and Devices
-In the other implementations of Kilt-Protocol as seen in [socialKYC](https://socialkyc.io/), users, attesters and verifiers are secured by an external extension the [Sporran Wallet](https://github.com/BTE-Trusted-Entity/sporran-extension). Therefore, it is viable that in a custom implementation some form of ["Cold Wallet"](https://web3isgoinggreat.com/glossary) can be implemented to ensure the safe storage of the Account and Credentials.
+![image](https://user-images.githubusercontent.com/115341229/200239866-0f192ef7-53b4-471c-86b5-fc7dbaa65678.png)
 
-#### Securing P2P Communication
-Apart from what the PoC has attempted to illustrate, in actual implementation a web3name is suggested to be linked to the Attester/Verifier instance. This web3name can then be verified by the user similar to what is done in this [quickstart documentation](https://docs.kilt.io/docs/develop/sdk/quickstart) done by the Kilt Team. This verification step can help in preventing malicious acts such as phishing as user can now verify if the service they giving their credentials to is legitimate or not.
+This verification step be implemented like above (similar to a 2-way SSL authentication) and it can better help in preventing malicious acts such as phishing as user can now verify if the service they giving their credentials to is legitimate or not.
 
 P2P communication between Attester and User, Verifier and User is done over HTTP naturally has to be secure by SSL (HTTPS). 
 
 An additional layer of security is also provided at [Application Level](https://docs.kilt.io/docs/concepts/messaging) in the [Messaging API](https://kiltprotocol.github.io/sdk-js/modules/_kiltprotocol_messaging.html) which gives additional encapsulation for user credentials and accounts. 
 
 Examples of its implementations can be found [here](https://github.com/BTE-Trusted-Entity/socialkyc.io/search?q=encrypt).
-
-### Achieving Decentralisation
-Over here we will briefly discuss about the ideal state of implementation.
-
-#### Distributed Trust
-![image](https://user-images.githubusercontent.com/115341229/199498802-3dba5e20-8758-4d47-9fc5-9bfdbdfb3cd0.png)
 
 
