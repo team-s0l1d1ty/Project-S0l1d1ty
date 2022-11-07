@@ -9,22 +9,35 @@ Thus, the solution has to explore adopting a _decentralised model of doing trust
 ### Overview of Transactions
 ![image](https://user-images.githubusercontent.com/115341229/199501575-7a06c797-34f1-4d94-810e-b64564bf5c34.png)
 
-
-### Credential Attestation
-<img src="https://user-images.githubusercontent.com/115341229/199499498-f5969f6f-c4ba-4250-8d17-7657afecf972.png" width=50% height=50%>
-
-### Credential Verification
-<img src="https://user-images.githubusercontent.com/115341229/199499555-0a09d1d0-04b0-4540-a375-441b190f797e.png" width=50% height=50%>
+There are 3 roles in a transaction : 
+- Claimer : 
+- Verifier : 
+- Attester : An Attester is an entity that has the ability to attest to a credential and write to the blockchain a proof of attestation.
 
 ## Objective of PoC
 Our Proof of Concept (PoC) seeks to illustrate how the concept above can be used to address the following problems in the problem statement  : 
-1. adding of new users to blockchain via P2P validation
-2. authentication and authorisation to service
-3. constant validation of security posture
+1. Adding of new users to blockchain via P2P validation (Credential Attestation)
+2. Authentication and authorisation to service (Credential Verification)
+3. Constant validation of security posture (Credential Revocation)
 
 Although security of user and/or device is not demonstrated in our PoC, a high-level [suggestion](#Suggestion-for-Securing-User-Device-and-P2P-Communication) has been provided below. Additionally, [Beyond the Poc](#Beyond-the-PoC) section will explain additional mechanisms not illustrated by the PoC.
 
 Usage instructions of our PoC can be found in our [Quickstart](https://github.com/team-s0l1d1ty/Project-S0l1d1ty/wiki/Quickstart).
+
+Shown below is a use case diagram which will form the basis of our PoC.
+
+### Credential Attestation
+![image](https://user-images.githubusercontent.com/115341229/200212847-009da606-7393-4e84-8adc-f872d6e0c079.png)
+
+
+### Credential Verification
+<img src="https://user-images.githubusercontent.com/115341229/200213960-8aa12c21-5d09-472c-8a15-9f630167853d.png" width=66% height=66%>
+
+### Credential Revocation
+
+<img src="https://user-images.githubusercontent.com/115341229/200215261-3e0824cc-9784-4cd1-8da8-b1770bcf3f74.png" width=66% height=15%>
+
+
 
 ## PoC High-level Architecture
 To demonstrate clearly the workflow as well as for ease of development, the PoC is built like a traditional client-server architecture but with a slight twist. 
