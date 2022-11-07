@@ -12,8 +12,8 @@
 - [Beyond the PoC](#beyond-the-poc)
   - [Scaling with serverless architecture](#scaling-with-serverless-architecture)
   - [Scaling with Distributed Trust](#scaling-with-distributed-trust)
-     - []()
-     -  
+     - [Delegate Rights](#delegate-rights)
+     - [Revoking Delegated Rights](#revoking-delegated-rights)
   - [Securing of light and full DID](#securing-of-light-and-full-did)
   - [Securing P2P Communication](#securing-p2p-communication)
 - [Demo Video](#demo-video)
