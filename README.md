@@ -26,16 +26,11 @@ Usage instructions of our PoC can be found in our [Quickstart](https://github.co
 
 Shown below is a use case diagram which will form the basis of our PoC.
 
-### Credential Attestation
-![image](https://user-images.githubusercontent.com/115341229/200212847-009da606-7393-4e84-8adc-f872d6e0c079.png)
-
-
-### Credential Verification
-<img src="https://user-images.githubusercontent.com/115341229/200213960-8aa12c21-5d09-472c-8a15-9f630167853d.png" width=66% height=66%>
-
-### Credential Revocation
-<img src="https://user-images.githubusercontent.com/115341229/200215738-a3632e45-80e4-4465-b710-bbb92083abdd.png" width=67% height=67%>
-
+| Use Case                |                                                                                                                  |
+|-------------------------|------------------------------------------------------------------------------------------------------------------|
+| Credential Verification | ![image](https://user-images.githubusercontent.com/115341229/200212847-009da606-7393-4e84-8adc-f872d6e0c079.png) |
+| Credential Verification | <img src="https://user-images.githubusercontent.com/115341229/200213960-8aa12c21-5d09-472c-8a15-9f630167853d.png" width=86% height=86%> |
+| Credential Revocation   | <img src="https://user-images.githubusercontent.com/115341229/200215738-a3632e45-80e4-4465-b710-bbb92083abdd.png" width=87% height=87%> |
 
 
 ## PoC High-level Architecture
