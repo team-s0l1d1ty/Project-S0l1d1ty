@@ -1,4 +1,21 @@
 # Project-S0l1d1ty
+- [Problem Statement](#problem-statement)
+- [Concept of Claim, Attestation and Verification](#concept-of-claim-attestation-and-verification)
+  - [Overview of Transactions](#overview-of-transactions)
+- [Objective of PoC](#objective-of-poc)
+- [PoC High-level Architecture](#poc-high-level-architecture)
+  - [Technology Stack](#technology-stack)
+- [PoC High-level Workflow](#poc-high-level-workflow)
+  - [Adding of New User via P2P Validation](#adding-of-new-user-via-p2p-validation)
+  - [Authentication and Authorisation](#authentication-and-authorisation)
+  - [Constant Validation of Security Posture](#constant-validation-of-security-posture)
+- [Beyond the PoC](#beyond-the-poc)
+  - [Scaling with serverless architecture](#scaling-with-serverless-architecture)
+  - [Scaling with Distributed Trust](#scaling-with-distributed-trust)
+  - [Securing of light and full DID](#securing-of-light-and-full-did)
+  - [Securing P2P Communication](#securing-p2p-communication)
+- [Demo Video](#demo-video)
+
 ## Problem Statement
 The downside to a centralized ID management means that it is susceptible to a single source of failure. In event that the central ID provider is made unavailable and rendered
 non-recoverable, the central ID provider/agency will not be able to perform trust attestation or authentication of users and devices.
@@ -10,8 +27,8 @@ Thus, the solution has to explore adopting a _decentralised model of doing trust
 ![image](https://user-images.githubusercontent.com/115341229/199501575-7a06c797-34f1-4d94-810e-b64564bf5c34.png)
 
 There are 3 roles in a transaction : 
-- Claimer : 
-- Verifier : 
+- Claimer : A claimer is an entity that is claiming a credential and requesting an attestment for the credential. 
+- Verifier : A verifier is an entity that is verifying the credential through querying the blockchain for the validity of the attestation of the credential.
 - Attester : An Attester is an entity that has the ability to attest to a credential and write to the blockchain a proof of attestation.
 
 ## Objective of PoC
@@ -38,7 +55,6 @@ To demonstrate clearly the workflow as well as for ease of development, the PoC 
 
 ![image](https://user-images.githubusercontent.com/115341229/200222444-0e61406b-e995-42fc-9c88-68dc753eb48d.png)
 
-
 As can be seen above : 
 1. Client communicates with Attestation Webserver/Service like any Client-Server architecture.
 2. Instead of an centralised authentication database / oauth system, webserver directly querying the blockchain
@@ -50,14 +66,13 @@ As can be seen above :
 
 ## PoC High-level Workflow
 
-### Adding of New User/Device via P2P Validation<br>(Credential Attestation) 
+### Adding of New User via P2P Validation
 ![image](https://user-images.githubusercontent.com/115341229/200221519-9dc26345-1023-419b-ace8-43f3775459ab.png) 
 
 1. User will enter and send their claim through POST request to server
 2. Server will take the input and 
 
-
-### Authentication and Authorisation (Credential Verification) 
+### Authentication and Authorisation
 ![image](https://user-images.githubusercontent.com/115341229/200223103-31dbfe70-ad46-430c-9b64-43e9dab08ec5.png)
 
 1. User will be presented a login page.
@@ -65,7 +80,7 @@ As can be seen above :
 3. Server received POST request, check's if it is the correct credential format and verifies the credential by querying the blockchain.
 4. If verification is successful, server allows access to service. Else access to service is denied. 
 
-### Constant Validation of Security Posture (Revocation of credentials)
+### Constant Validation of Security Posture
 ![image](https://user-images.githubusercontent.com/115341229/200229434-be577bc0-afea-48c6-accf-6100d193caf6.png)
 
 1. In the same attester portal, an attester can revoke credentials that they attested.
@@ -75,8 +90,8 @@ As can be seen above :
    - Revoke : The attestation is still present on the blockchain but with a revoke:true flag set.
    - Remove : Attestation is removed from the blockchain. 
 
-## Beyond the PoC (Ideal Implementation)
-### Scaling with "serverless architecture"
+## Beyond the PoC
+### Scaling with serverless architecture
 
 ### Scaling with Distributed Trust
 ![image](https://user-images.githubusercontent.com/115341229/199498802-3dba5e20-8758-4d47-9fc5-9bfdbdfb3cd0.png)
@@ -98,4 +113,4 @@ An additional layer of security is also provided at [Application Level](https://
 
 Examples of its implementations can be found [here](https://github.com/BTE-Trusted-Entity/socialkyc.io/search?q=encrypt).
 
-
+## Demo Video
