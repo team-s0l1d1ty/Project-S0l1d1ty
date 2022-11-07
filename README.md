@@ -148,11 +148,23 @@ Lastly, an additional verification step can be implemented like above (similar t
 ### Scaling with serverless architecture
 ![image](https://user-images.githubusercontent.com/115341229/200275934-c1668428-d38e-4a9c-bbdc-3b36739cfaef.png)
 
-The claiming, attesting, delegation, revocation and verification function can be made into AWS lamda, Google Cloud Functions or Azure Functions as the aforementioned functions are relatively simple and straighforward. As such, a serverless architecture can be used to lower cost, scale better and offers better security.
+Most of the functions (i.e claiming, attesting, delegation, revocation and verification) can be deployed on FaaS (e.g AWS lamda, Google Cloud Functions or Azure Functions) as the aforementioned functions can be easily designed:  
+1. To make use of short and single purpose APIs or webservices.
+2. To be stateless such that local resources and processes are not reused.
 
-
+Therefore, a serverless architecure can provide better 
+1. **availability** as there is no server downtime, and we we solely depend on CSPs SLA Uptime which is at least 99.95%. 
+2. **scalability** as functions in FaaS can be spun up as quickly as the CSPs can handle
+3. **security and privacy**[1](https://www.checkpoint.com/cyber-hub/cloud-security/what-is-serverless-security/) [2](https://documents.trendmicro.com/assets/white_papers/wp-securing-weak-points-in-serverless-architectures-risks-and-recommendations.pdf) as 
+   - we eliminate the need to secure the infrastructure (OS hardening, patching, server configurations etc).
+   - ephemeral execution makes attacks difficult as the amount of time in the system is restricted to the timeout set.  
+   - ephemeral execution makes data private as it is destroyed and not stored in the memory
+   - fine-grained security controls with IAM will restrict the impact of an attack. 
+   - short and single purpose APIs introduces less bugs as compared to monolithic applications
+   - Focused on securing solely the endpoints, code, storage and accessibility of data.
+4. **lower cost** as FaaS services charges based on per invocation basis and StaaS charges based on per Gb data stored and per 1000 requests.
 
 ### Bring Your Own Blockchain
-Following this [guide](https://docs.kilt.io/docs/develop/sdk/chain_setup/standalone-chain-setup), we will be able to build our own hybrid chain 
+Following this [guide](https://docs.kilt.io/docs/develop/sdk/chain_setup/standalone-chain-setup), as well as the fact that Kilt is a parachain of Polkadot blockchain, built using [Substrate](https://substrate.io/), it will be possible to deploy  a private or hybrid blockchain network.  
 
 ## Demo Video
