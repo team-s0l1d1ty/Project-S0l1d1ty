@@ -194,8 +194,27 @@ In this scenario, there isn't any public facing items. Furthermore, asset owners
 
 ## Demo Video
 
+
+
 ## Afterword
-During our journey in this hackathon, our team has faced with a number of challenges:
-1. Building a PoC instead of an actual Prototype
-2. Using of Testnet as compared to building the node ourself
-3. Lack of resource
+As we come to a close to the hackathon, below is a reflection of our development and thought process. 
+
+### Choosing Between Hyperledger Indy and Kilt Protocol 
+As we wanted to do a project related to blockchain, choosing Problem Statement 2 is a given. 
+
+In our initial research, we shortlisted 2 frameworks which we think best fits the problem statement and they are Kilt Protocol and Hyperledger Indy. Of these 2 frameworks, Kilt has the better documentation, better support, shorter learning curve and uses a less complex set-up as compared to Hyperledger Indy.
+
+Additionally, Kilt SDK uses Javascript/Typescript which we are already familiar with as compared to Hyperledger which uses Rust where we do not have the luxury of time to figure out. As most of our team members are undergradutaes, the hackathon clashes with exams and FYP presentations. We had to juggle with learning about the protocol, building the PoC as well as schoolwork. Learning a new programming language will naturally be something left for another day. Kilt is therefore the go-to for understanding DID as well as for building our PoC. 
+
+Furthermore, Kilt has 2 testnets which we could use immediately, and we do not need to set up our own testnet. Having an actual testnet (over the internet) not only alleviates the the skill issue of deploying and connecting to a node but also allows us to simulate an actual network which we hoped would bring out the decentralised feature of our PoC. 
+
+### New to the Protocol and not making full use of all the features
+Even though Kilt has a shorter learning curve there is still quite a bit of unexplored features like service endpoints, digital signing, encrypted messaging and delegation. We were only able to grasp the core features Claim, Attest, Revoke, Verify, Light DID and Full DID and are starting to learn about the features mentioned above.
+
+As Kilt is still undergoing active development, we also faced the problem of breaking changes in the protocol in the midst of the hackathon. Kilt SDK 0.29 was released in the middle of the hackathon. As we are unable to afford human and time capital to reconfigure our setup, we chose to remain with Kilt SDK 0.28 to showcase the core features of Kilt Protocol. Even though we might say "breaking changes" the main change that affects our PoC is the removal of Demo Keystore.  
+
+### Building a PoC instead of an actual Prototype
+Due to the challenges faced above, we decided to build a PoC first to check out the core features of Kilt protocol as well as the feasibility to build what we proposed in [Beyond the PoC](#beyond-the-poc). Through our PoC, we believe that Kilt Protocol can truly be used for [Phishing prevention](#phishing-prevention) and [IoTs role-based access control](#iots-role-based-access-control).
+
+### Moving Forward
+We seek to improve on our current work and hope to be able to build a working prototype which can be deployed where necessary e.g IoT DID, Phishing prevention, Personal DID.
