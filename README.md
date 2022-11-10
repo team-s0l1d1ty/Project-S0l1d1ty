@@ -21,6 +21,10 @@
      - [IoTs role-based access control](#iots-role-based-access-control)
 - [Demo Video](#demo-video)
 - [Afterword](#afterword)
+   - [Choosing Between Hyperledger Indy and Kilt Protocol](#choosing-between-hyperledger-indy-and-kilt-protocol) 
+   - [New to the Protocol and not making full use of all the features](#new-to-protocol-and-not-making-full-use-of-all-the-features)
+   - [Building a PoC over an Actual Prototype](#building-a-poc-over-an-actual-prototype)
+   - [Moving Forward](#moving-forward)
 
 ## Problem Statement
 The downside to a centralized ID management means that it is susceptible to a single source of failure. In event that the central ID provider is made unavailable and rendered
@@ -155,8 +159,6 @@ Lastly, an additional verification step can be implemented like above (similar t
 ### Scaling with serverless architecture
 ![image](https://user-images.githubusercontent.com/115341229/200328149-88573fb8-2302-47d3-8a91-243b9fbcdb7d.png)
 
-
-
 Most of the functions (i.e claiming, attesting, delegation, revocation and verification) can be deployed on FaaS (e.g AWS lamda, Google Cloud Functions or Azure Functions) as the aforementioned functions can be easily designed:  
 1. To make use of short and single purpose APIs or webservices.
 2. To be stateless such that local resources and processes are not reused.
@@ -213,7 +215,7 @@ Even though Kilt has a shorter learning curve there is still quite a bit of unex
 
 As Kilt is still undergoing active development, we also faced the problem of breaking changes in the protocol in the midst of the hackathon. Kilt SDK 0.29 was released in the middle of the hackathon. As we are unable to afford human and time capital to reconfigure our setup, we chose to remain with Kilt SDK 0.28 to showcase the core features of Kilt Protocol. Even though we might say "breaking changes" the main change that affects our PoC is the removal of Demo Keystore.  
 
-### Building a PoC instead of an actual Prototype
+### Building a PoC over an Actual Prototype
 Due to the challenges faced above, we decided to build a PoC first to check out the core features of Kilt protocol as well as the feasibility to build what we proposed in [Beyond the PoC](#beyond-the-poc). Through our PoC, we believe that Kilt Protocol can truly be used for [Phishing prevention](#phishing-prevention) and [IoTs role-based access control](#iots-role-based-access-control).
 
 ### Moving Forward
