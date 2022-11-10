@@ -197,7 +197,7 @@ In this scenario, there isn't any public facing items. Furthermore, asset owners
 
 
 ## Afterword
-As we come to a close to the hackathon, below is a reflection of our development and thought process. 
+As we come to a close to the hackathon, this is a reflection of our development and thought process. 
 
 ### Choosing Between Hyperledger Indy and Kilt Protocol 
 As we wanted to do a project related to blockchain, choosing Problem Statement 2 is a given. 
