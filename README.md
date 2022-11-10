@@ -21,7 +21,6 @@
      - [IoTs role-based access control](#iots-role-based-access-control)
 - [Demo Video](#demo-video)
 - [Afterword](#afterword)
-   - [Challenges](#challenges)
 
 ## Problem Statement
 The downside to a centralized ID management means that it is susceptible to a single source of failure. In event that the central ID provider is made unavailable and rendered
