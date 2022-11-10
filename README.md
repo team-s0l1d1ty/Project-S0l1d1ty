@@ -171,6 +171,22 @@ Therefore, a serverless architecure can provide better :
 4. **lower cost** as FaaS services charges based on per invocation basis and StaaS charges based on per Gb data stored and per 1000 requests.
 
 ### Bring Your Own Blockchain
-Following this [guide](https://docs.kilt.io/docs/develop/sdk/chain_setup/standalone-chain-setup), as well as the fact that Kilt is a parachain of Polkadot blockchain, built using [Substrate](https://substrate.io/), it will be possible to deploy  a private or hybrid blockchain network.  
+Following this [guide](https://docs.kilt.io/docs/develop/sdk/chain_setup/standalone-chain-setup), as well as the fact that Kilt is a parachain of Polkadot blockchain, built using [Substrate](https://substrate.io/), it will be possible to deploy a private or hybrid blockchain. A private blockchain can focus mainly on access control and performance which is essential in DID. Whereas, hybrid network focuses on flexible infrastructure settings. To understand which network is required, we will have to look at the potential of this POC.
+
+#### Phishing prevention
+One of the biggest problem in Singapore is phishing websites. Humans are not able to verify the integrity of the website and fail to identify a phishing site. However, with DIDs, it is possible for user to identify an official site. Here's a brief description on how it can be done.
+1) Every website is considered a claimer. Each claimer will send a set of site credentials for an attester to approve.
+2) Once the website is approved by an attester, it will be stored in the blockchain while returning the credential to the site
+3) Any individual that visit the site will be known as a verifier. A verifier can request a check on credential from the site and match it with the blockchain. If it matches, the site is valid, else it is a phishing site
+
+Since there are both public and private facing items, a hybrid blockchain will be required for this setup. A set of permissions are required for attesters to approve the credentials submitted by claimers while the public facing blockchain is open for verifiers to request for a check.
+
+#### IoTs
+For the longest time, IoTs are managed by IP based access controls. It is insufficient to have IP based access control as well. However with DIDs, we can assign role based access control to IoTs. Here's a brief description on how it can be done.
+1) Every IoTs is considered a claimer/verifier. Each IoTs will send a set of credentials for an attester to approve.
+2) Upon approval, these credentials will be store in a blockchain.
+3) If an IoT goes rogue and tries to access other network, the role based access control will kick in and deny the process before the IP based access control kicks in
+
+In this scenario, there isn't any public facing items. Furthermore, asset ownership and access control is important in managing this group of IoTs. Therefore private blockchain can be used.
 
 ## Demo Video
