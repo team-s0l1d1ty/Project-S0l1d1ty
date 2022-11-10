@@ -20,6 +20,7 @@
      - [Phishing prevention](#phishing-prevention)
      - [IoTs role-based access control](#iots-role-based-access-control)
 - [Demo Video](#demo-video)
+- [Afterword](#afterword)
 
 ## Problem Statement
 The downside to a centralized ID management means that it is susceptible to a single source of failure. In event that the central ID provider is made unavailable and rendered
@@ -192,3 +193,5 @@ For the longest time, IoTs are managed by IP based access controls. It is insuff
 In this scenario, there isn't any public facing items. Furthermore, asset ownership and access control is important in managing this group of IoTs. Therefore private blockchain can be used.
 
 ## Demo Video
+
+## Afterword
