@@ -17,6 +17,8 @@
   - [Securing P2P Communication](#securing-p2p-communication)
   - [Scaling with serverless architecture](#scaling-with-serverless-architecture)
   - [Bring Your Own Blockchain](#bring-your-own-blockchain)
+     - [Phishing prevention](#phishing-prevention)
+     - [IoTs role-based access control](#iots-role-based-access-control)
 - [Demo Video](#demo-video)
 
 ## Problem Statement
@@ -181,7 +183,7 @@ One of the biggest problem in Singapore is phishing websites. Humans are not abl
 
 Since there are both public and private facing items, a hybrid blockchain will be required for this setup. A set of permissions are required for attesters to approve the credentials submitted by claimers while the public facing blockchain is open for verifiers to request for a check.
 
-#### IoTs
+#### IoTs role-based access control
 For the longest time, IoTs are managed by IP based access controls. It is insufficient to have IP based access control as well. However with DIDs, we can assign role based access control to IoTs. Here's a brief description on how it can be done.
 1) Every IoTs is considered a claimer/verifier. Each IoTs will send a set of credentials for an attester to approve.
 2) Upon approval, these credentials will be store in a blockchain.
