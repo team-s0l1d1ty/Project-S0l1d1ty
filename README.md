@@ -21,6 +21,7 @@
      - [IoTs role-based access control](#iots-role-based-access-control)
 - [Demo Video](#demo-video)
 - [Afterword](#afterword)
+   - [Challenges](#challenges)
 
 ## Problem Statement
 The downside to a centralized ID management means that it is susceptible to a single source of failure. In event that the central ID provider is made unavailable and rendered
@@ -195,3 +196,7 @@ In this scenario, there isn't any public facing items. Furthermore, asset owners
 ## Demo Video
 
 ## Afterword
+During our journey in this hackathon, our team has faced with a number of challenges:
+1. Building a PoC instead of an actual Prototype
+2. Using of Testnet as compared to building the node ourself
+3. Lack of resource
