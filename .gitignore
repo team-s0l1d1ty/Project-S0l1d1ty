@@ -135,5 +135,4 @@ dist
 
 #private env
 /env
-/temp/*
 /Account-assets
