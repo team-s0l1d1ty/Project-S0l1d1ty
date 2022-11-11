@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/progressbar.css">
+        <link rel="stylesheet" href="./css/styles.css"/>
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="pbar">
+              <ul class="progressbar">
+               <li class="active">Claim Credential</li>
+               <li>Attest Credential</li>
+               <li>Retrieve Credential</li>
+               <li>Login to Service</li>
+               <li>Revoke Credential</li>
+               </ul>
+            </div>   
+              
+            <h1>Attester Dashboard</h1>
+            
+        </div>
+        <div>            
+            <h2>Attester DID: {{{AttesterDID}}}</h2>
+        </div>
+
+        <div class="topnav">
+            <a class="active" href="/dashboard">Attest</a>
+            <a href="/service">Service</a>
+            <a href="/revoke">Revoke</a>
+        </div>  
+        
+        <div>
+            <h2>Credentials to Attest</h2>
+            {{{content}}}
+        </div>
+
+        <div class="attester_form">
+            <form action="attest" method="post">
+                <div>
+                  <label for="DID"><b>Attester DID</b></label>
+                  <input type="text" placeholder="Enter Attester DID" name="AttesterDID" required>
+                  <label for="Attester Mnemonic"><b>Attester Mnemonic</b></label>
+                  <input type="text" placeholder="Enter Attester Mnemonic" name="AttesterMnemonic" required>
+                  <label for="Cred2Attest"><b>Credential to Attest</b></label>
+                  <input type="text" placeholder="Enter Credential to Attest" name="Cred2Attest" required>
+                  <button type="submit" name="Attest" value="true">Attest</button>
+                  <button type="submit" name="Attest" value="false">Reject</button>
+                </div>
+              </form> 
+        </div>
+        
+    </body>
+</html> 

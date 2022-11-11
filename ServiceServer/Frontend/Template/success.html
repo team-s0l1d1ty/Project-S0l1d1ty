@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/progressbar.css">
+        <link rel="stylesheet" href="/css/styles.css"/>
+      </head>
+    <body>
+        <div class = 'header'>
+                <div class="pbar">
+                    <ul class="progressbar">
+                     <li class="active">Claim Credential</li>
+                     <li class="active">Attest Credential</li>
+                     <li class="active">Retrieve Credential</li>
+                     <li class="active">Login to Service</li>
+                     <li>Revoke Credential</li>
+                  </ul>
+                  </div>
+        </div>
+        <div>
+            <h1>The Most Legit Citizen Webmail</h1>
+        </div>
+        <table class = 'center'>
+            <tr>
+                <td style="width:20%">Logged in as:</td>
+                <td><p>{{{content}}}</p></td>
+                <td style="width:20%">
+                    <div class='logout_button' style="float:center">
+                        <button onclick="window.location.href='/logout';">
+                            <h1>Logout</h1>
+                          </button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+        <table class = 'center'>
+            <tr><td><iframe class = 'center' width='930' height='500' src="https://10minutemail.net/" title="Temp Mailbox"></iframe></td></tr>
+        </table>
+        
+        
+        
+    </body>
+</html> 

@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <link rel="stylesheet" href="css/progressbar.css">
+    <link rel="stylesheet" href="css/styles.css"/>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="pbar">
+        <ul class="progressbar">
+         <li class="active">Claim Credential</li>
+         <li>Attest Credential</li>
+         <li>Retrieve Credential</li>
+         <li>Login to Service</li>
+         <li>Revoke Credential</li>
+         </ul>
+        </div>
+
+        <h1>Claimer Request for Credentials</h1>
+    </div>
+
+    <div class="body">
+      <h3>Claim Credentials and Light DID</h3>
+
+      <div class="form_styles">
+        <form id="MyForm" action="/claim" method="post">
+      
+          <label>Citizenship</label>
+          <input type="text" name="citizenship" placeholder="Enter your citizenship" required/><br>
+    
+          <label>Citizen ID</label>
+          <input type="text" name="citizenid" placeholder="Enter your Citizen ID" required/><br>
+    
+          <label>Enter Name</label>
+          <input type="text" name="name" placeholder="Enter your name" required/><br>
+          
+          <label>Enter Address</label>
+          <input type="text" name="address" placeholder="Enter your address" required/><br>
+          
+          <button type="submit" >Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>

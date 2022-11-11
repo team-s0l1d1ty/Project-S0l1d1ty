@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/progressbar.css">
+        <link rel="stylesheet" href="./css/styles.css"/>
+    </head>
+    <body>
+        <div class="pbar">
+                   <ul class="progressbar">
+                    <li class="active">Claim Credential</li>
+                    <li class="active">Attest Credential</li>
+                    <li class="active">Retrieve Credential</li>
+                    <li class="active">Login to Service</li>
+                    <li class="active">Revoke Credential</li>
+                </ul>
+            </div>
+        <div class="header">
+            <h1>Attester Dashboard</h1>
+            <h2>Attester DID: {{{AttesterDID}}}</h2>
+        </div>
+        <div class="topnav">
+            <a href="/dashboard">Attest</a>
+            <a href="/service">Service</a>
+            <a href="/revoke">Revoke</a>
+        </div> 
+        
+        <div class="content">
+            <h2>Attested Credentials</h2>
+            <p>{{{content}}}</p>
+        </div>
+        
+        <div>
+            <form action="revoke" method="post">
+                <div class="form">
+                  <label for="DID"><b>Attester DID</b></label>
+                  <input type="text" placeholder="Enter Attester DID" name="AttesterDID" required>
+                  <label for="Attester Mnemonic"><b>Attester Mnemonic</b></label>
+                  <input type="text" placeholder="Enter Attester Mnemonic" name="AttesterMnemonic" required>
+                  <label for="Cred2Revoke"><b>Credential to Revoke</b></label>
+                  <input type="text" placeholder="Enter Credential to Revoke" name="Cred2Revoke" required>
+                  <button type="submit">Revoke</button>
+                </div>
+              </form>  
+        </div>
+
+        <div>
+            <a href="http://localhost:4000">Attempt to Login to Service Again</a>
+        </div>
+
+        
+</body>
+</html> 

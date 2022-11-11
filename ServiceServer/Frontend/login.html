@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/progressbar.css">
+    <link rel="stylesheet" href="/css/styles.css"/>
+  </head>
+
+<body>
+  <div class="header">
+    <div class="pbar">
+      <ul class="progressbar">
+       <li class="active">Claim Credential</li>
+       <li class="active">Attest Credential</li>
+       <li class="active">Retrieve Credential</li>
+       <li>Login to Service</li>
+       <li>Revoke Credential</li>
+    </ul>
+    </div>
+    <h1>The Most Legit Citizen Webmail</h1>
+  </div>
+  <div class="Body">
+    <p>Login with Citizen Credential</p>
+    <form action="login" method="post">
+      <div class="container">
+        <label for="Mnemonic"><b>Mnemonic</b></label>
+        <input type="text" placeholder="Enter Mnemonic" name="mnemonic" required>
+        <label for="Credential"><b>Credential</b></label>
+        <input type="text" placeholder="Enter Credential" name="credential" required>
+        <button type="submit">Login</button>
+      </div>
+      </form>  
+  </div>
+  <div>
+    <a href="http://localhost:3000/admin">After Verifying, it is now time to revoke credentials</a>
+  </div>
+
+
+</body>
+</html> 

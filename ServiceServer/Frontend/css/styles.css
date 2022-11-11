@@ -1,0 +1,103 @@
+/* Below line is used for online Google font */
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+/*heading*/
+
+h1{
+    margin-top: 2.5em;
+    
+    text-align: center;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p{
+    font-size:1sem;
+    margin-top: 0.5em;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+table,th,td,tr{
+    table-layout:fixed;
+    width:90%;
+    margin-top: 0.5em;
+    word-wrap: break-word;
+    text-align: center;
+    border:1px solid green;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+/*input field*/
+.formstyles{
+    text-align: left;
+}
+
+.mydiv{
+    text-align: center;
+}
+
+input[type="text"]{
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+}
+.body{
+    text-align: center;
+}
+
+/*checkboxes*/
+.checks{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+button[type="submit"]{
+    border: none;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*background*/
+html{
+    background-image: linear-gradient(to right, #9a9999, rgb(203, 203, 203));
+}
+
+/*attester dashboard template*/
+.attester_form {
+    text-align: center;
+}
+/*attester dashboard nav bar*/
+
+.topnav{
+    background-color:none;
+    overflow: none;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+.topnav a{
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+
+.topnav a:hover{
+    background-color: rgb(197, 194, 194);
+    color: #9a9999;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/progressbar.css">
+        <link rel="stylesheet" href="./css/styles.css"/>
+    </head>
+    <body>
+        <div class="pbar">
+                   <ul class="progressbar">
+                    <li class="active">Claim Credential</li>
+                    <li class="active">Attest Credential</li>
+                    <li class="active">Retrieve Credential</li>
+                    <li>Login to Service</li>
+                    <li>Revoke Credential</li>
+                </ul>
+            </div>
+        <div class="header">
+            <h1>Attester Dashboard</h1>
+            <h2>Attester DID: {{{AttesterDID}}}</h2>
+        </div>
+        <div class="topnav">
+            <a href="/dashboard">Attest</a>
+            <a href="/service">Service</a>
+            <a href="/revoke">Revoke</a>
+        </div> 
+        
+        <div class="content">
+            <h2>Credential LightDID & Mnemonic</h2>
+            {{{claims}}}
+            <h2>Attested Credentials</h2>
+            {{{content}}}
+            <a href="http://localhost:4000">Use credential above to login to service</a>
+        </div>
+        
+        
+</body>
+</html> 
