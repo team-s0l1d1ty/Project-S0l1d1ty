@@ -9,6 +9,7 @@
   - [Adding of New User via P2P Validation](#adding-of-new-user-via-p2p-validation)
   - [Authentication and Authorisation](#authentication-and-authorisation)
   - [Constant Validation of Security Posture](#constant-validation-of-security-posture)
+- [Demo Video](#demo-video)
 - [Beyond the PoC](#beyond-the-poc)
   - [Scaling with Distributed Trust](#scaling-with-distributed-trust)
      - [Delegate Rights](#delegate-rights)
@@ -19,7 +20,6 @@
   - [Bring Your Own Blockchain](#bring-your-own-blockchain)
      - [Phishing prevention](#phishing-prevention)
      - [IoTs role-based access control](#iots-role-based-access-control)
-- [Demo Video](#demo-video)
 - [Afterword](#afterword)
    - [Choosing Between Hyperledger Indy and Kilt Protocol](#choosing-between-hyperledger-indy-and-kilt-protocol) 
    - [New to the Protocol and not making full use of all the features](#new-to-protocol-and-not-making-full-use-of-all-the-features)
@@ -103,6 +103,10 @@ As can be seen above :
 4. The difference between revoking and removing is : 
    - Revoke : The attestation is still present on the blockchain but with a `"revoked":false` flag set.
    - Remove : Attestation is removed from the blockchain. 
+
+## Demo Video
+
+
 
 ## Beyond the PoC
 This section will talk about ideas and Kilt-Protocol mechanisms in terms of scaling and security not shown in the PoC.
@@ -193,10 +197,6 @@ For the longest time, IoTs are managed by IP based access controls. It is insuff
 3) If an IoT goes rogue and tries to access other network, the role based access control will kick in and deny the process before the IP based access control kicks in
 
 In this scenario, there isn't any public facing items. Furthermore, asset ownership and access control is important in managing this group of IoTs. Therefore private blockchain can be used.
-
-## Demo Video
-
-
 
 ## Afterword
 As we come to a close to the hackathon, this is a reflection of our development and thought process. 
