@@ -106,7 +106,7 @@ As can be seen above :
 
 ## Demo Video
 
-[![image](http://img.youtube.com/vi/1CdlL452s14/0.jpg)](https://youtu.be/1CdlL452s14)
+[![image](http://i3.ytimg.com/vi/1CdlL452s14/hqdefault.jpg)](https://youtu.be/1CdlL452s14)
 
 
 ## Beyond the PoC
